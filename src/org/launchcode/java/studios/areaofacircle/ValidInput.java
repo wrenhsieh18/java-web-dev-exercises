@@ -6,13 +6,17 @@ public class ValidInput {
 
     public static Double promptPositiveNum() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a radius: ");
-        double ranRadius = input.nextDouble();
-        while (ranRadius <= 0) {
-            System.out.println("Please enter a positive number!");
+        double ranRadius;
+
+        do {
             System.out.println("Enter a radius: ");
+            while (!input.hasNextDouble()) {
+                System.out.println("Please a valid number: ");
+                input.next();
+            }
             ranRadius = input.nextDouble();
-        }
+        } while (ranRadius <= 0);
+
         input.close();
         return ranRadius;
     }
