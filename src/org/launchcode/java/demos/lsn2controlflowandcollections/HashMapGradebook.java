@@ -12,6 +12,7 @@ public class HashMapGradebook {
         Scanner input = new Scanner(System.in);
         String newStudent;
 
+
         System.out.println("Enter your students (or ENTER to finish):");
 
         // Get student names and grades
@@ -19,7 +20,6 @@ public class HashMapGradebook {
 
             System.out.print("Student: ");
             newStudent = input.nextLine();
-
             if (!newStudent.equals("")) {
                 System.out.print("Grade: ");
                 Double newGrade = input.nextDouble();
@@ -27,8 +27,8 @@ public class HashMapGradebook {
 
                 // Read in the newline before looping back
                 input.nextLine();
-            }
 
+            }
         } while(!newStudent.equals(""));
 
         // Print class roster
